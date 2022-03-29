@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/output.css" rel="stylesheet">
+    <title>PIN</title>
+</head>
+<body class="bg-blue-700">
+    <div class="flex mt-20">
+        <div class="w-1/2 flex justify-center">
+        <img src="/img/pin.png" alt="">
+        </div>
+        <div>
+        <h1 class="text-white text-center font-bold text-3xl mt-10">MASUKAN PIN</h1>
+        <form onsubmit="pin()">
+            <input type="password" required class=" border-2 border-black-600 mt-20 text-4xl text-black" placeholder="Masukan Pin" id="angkapin">
+            <input type="submit" value="ENTER" class="text-4xl text-white font-semibold">
+        </form>
+        <h1 class="text-white text-center font-bold text-3xl mt-20">TEKAN 'ENTER' JIKA SELASAI<br>MEMASUKAN PIN</h1>
+        </div>
+    </div>
+</body>
+<script>
+    function pin() {
+        let pin = document.getElementById('angkapin').value;
+        if (pin==123456) {
+            window.open('/pages/4.tariktunai.html','_blank');
+        } 
+         else{
+        alert('pin yang anda masukan salah');
+        }
+    }
+</script>
+</html>
